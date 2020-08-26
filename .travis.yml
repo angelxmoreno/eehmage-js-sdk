@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+    - stable
+install:
+    - yarn install
+script:
+    - yarn lint:check
+    - yarn test
+after_success: yarn coverage

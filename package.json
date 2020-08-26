@@ -1,0 +1,39 @@
+{
+    "name": "eehmage-js-sdk",
+    "version": "1.0.0",
+    "main": "dist/index.js",
+    "types": "dist/types/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "lint": "eslint --cache --ext=js,json,ts,tsx -- .",
+        "beautify": "prettier --write .",
+        "lint:check": "yarn tslint -c tslint.json -p tsconfig.json && yarn prettier --check .",
+        "test": "nyc --reporter=html --reporter=text mocha",
+        "coverage": "nyc report --reporter=text-lcov | coveralls"
+    },
+    "repository": "https://github.com/angelxmoreno/eehmage-js-sdk.git",
+    "bugs": {
+        "url": "https://github.com/angelxmoreno/eehmage-js-sdk/issues"
+    },
+    "homepage": "https://github.com/angelxmoreno/eehmage-js-sdk#readme",
+    "author": "Angel X. Moreno <angelxmoreno@gmail.com>",
+    "license": "MIT",
+    "dependencies": {
+        "@types/mocha": "^8.0.3",
+        "@typescript-eslint/eslint-plugin": "^3.10.1",
+        "@typescript-eslint/parser": "^3.10.1",
+        "chai": "^4.2.0",
+        "coveralls": "^3.1.0",
+        "eslint": "^7.7.0",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-prettier": "^3.1.4",
+        "mocha": "^8.1.2",
+        "nyc": "^15.1.0",
+        "prettier": "^2.1.1",
+        "ts-node": "^9.0.0",
+        "typescript": "^4.0.2"
+    },
+    "devDependencies": {
+        "source-map-support": "^0.5.19"
+    }
+}
